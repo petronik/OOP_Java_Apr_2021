@@ -5,26 +5,31 @@
  * my example of circle
  */
 
-import java.util.Scanner;
-
-public class Circle {
-    public static void main(String[] args) {
-        Scanner stdIn = new Scanner(System.in);
-        DrawCircle circle = new DrawCircle();
-        int radius;
-
-        System.out.print("What radius would you like for the circle? ");
-        radius = stdIn.nextInt();
-
-        circle.setRadius(radius);
-        circle.draw();
-    }
+class Point {
+   private double _x = 0;
+   private double _y = 0;
+   
+   public Point(double x, double y) {
+	   _x = x; _y = y;
+   }
 }
 
-class DrawCircle {
-    private int _radius;
-
-    public void setRadius(int value) {
+public class Circle {
+	
+   private int _radius;
+   private Point _center;
+   
+   public Circle() {}
+   
+   public Circle(int raduis) {
+	   _radius = raduis;
+   }
+   
+   public Circle(int raduis, double x, double y) {
+	   _radius = raduis;
+	   _center = new Point(x, y);
+   }
+   public void setRadius(int value) {
 
         // if (value < 0 || value > 9) {
         // System.out.println();
@@ -51,3 +56,4 @@ class DrawCircle {
         }
     }
 }
+
