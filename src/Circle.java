@@ -1,4 +1,4 @@
-package ClassMaker.OOP_Java_Apr_2021.src;
+// package ClassMaker.OOP_Java_Apr_2021.src;
 
 
 class MyCircle {
@@ -31,13 +31,52 @@ class MyCircle {
     }
 }
 
+/**
+ * Ken DeWitt
+ * 
+ * my example of circle
+ */
+
 public class Circle {
-    public static void main(String[] args){
 
-        MyCircle d1 = new MyCircle();
-        d1.setRadius(44);
-        d1.setIsFilled(true);
+   private int _radius;
+   private Point _center;
+   
+   public Circle() {}
+   
+   public Circle(int raduis) {
+	   _radius = raduis;
+   }
+   
+   public Circle(int raduis, double x, double y) {
+	   _radius = raduis;
+	   _center = new Point(x, y);
+   }
+   public void setRadius(int value) {
 
-        d1.draw();
+        // if (value < 0 || value > 9) {
+        // System.out.println();
+        // } else {
+        _radius = value;
+        // }
+
+    }
+
+    public int getRadius() {
+        return _radius;
+    }
+
+    public void draw() {
+        for (int y = -_radius; y <= _radius; y += 2) {
+            for (int x = -_radius; x <= _radius; ++x) {
+
+                if (y * y + x * x <= _radius * _radius)
+                    System.out.print("*");
+                else
+                    System.out.print(' ');
+            }
+            System.out.println();
+        }
     }
 }
+
