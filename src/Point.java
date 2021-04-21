@@ -12,4 +12,9 @@ public class Point {
 	public boolean equals(Point obj) {
 		return _x == obj._x && _y == obj._y;
 	}
+
+	@Override
+	public String toString() {
+		return "x = " + _x + " y = " + _y;
+	}
 }
