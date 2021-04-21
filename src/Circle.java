@@ -1,4 +1,4 @@
-package ClassMaker.OOP_Java_Apr_2021.src;
+// package ClassMaker.OOP_Java_Apr_2021.src;
 
 
 class MyCircle {
@@ -37,18 +37,8 @@ class MyCircle {
  * my example of circle
  */
 
-class Point {
-   private double _x = 0;
-   private double _y = 0;
-   
-   public Point(double x, double y) {
-	   _x = x; _y = y;
-   }
-}
-
 public class Circle {
 
-	
    private int _radius;
    private Point _center;
    

@@ -4,7 +4,16 @@ public class Intro {
 
 	public static void main(String[] args) {
 		
-		Rectangle r = new Rectangle();
+		Point p1 = new Point(7, 9);
+		Point p2 = new Point(7, 9);
+		
+		// System.out.println( p1 == p2  );
+		System.out.println( p1.equals(p2) );
+		
+		System.out.println(Math.cos(Math.toRadians(30)));
+		
+		
+		// Rectangle r = new Rectangle();
 		
 		Rectangle r1 = new Rectangle(5, 15, false, null);
 		// r1.setHeight(5);
