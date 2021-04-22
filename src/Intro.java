@@ -5,7 +5,7 @@ public class Intro {
 	public static void main(String[] args) {
 		
 		Point p1 = new Point(7, 9);
-		Point p2 = new Point(7, 9);
+		Point p2 = new Point(7, 8);
 		
 		// System.out.println( p1 == p2  );
 		System.out.println( p1.equals(p2) );
@@ -34,12 +34,14 @@ public class Intro {
 		
         String str1 = "Hello World!";
         String str2 = new String("Hello World!");
-        char[] arrChar = {'H', 'e', 'l', 'l', '0'};
+        char[] arrChar = {'H', 'e', 'l', 'l', 'o'};
         String str3 = new String(arrChar);
         
         
         System.out.println(str1);		
         System.out.println(str2);		
-        System.out.println(str3);		
+        System.out.println(str3);	
+		
+		stdIn.close();
 	}
 }
