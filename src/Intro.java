@@ -1,11 +1,46 @@
+/*
+ class NewCar
+ 
+ - price: double
+ ..............
+ 
+ + getPrice(): double
+ ..............
+ 
+ class UsedCar
+ 
+ .................
+ 
+ */
+
 import java.util.Scanner;
 
 public class Intro {
 
 	public static void main(String[] args) {
 		
+		Account a1 = new Account(123456789, 500);
+		
+		System.out.println(a1.show());
+		
+		a1.withdraw(50);
+		a1.withdraw(120);
+		a1.withdraw(20);
+		
+		a1.deposit(10);
+		
+		System.out.println(a1.show());
+		
+		
+		System.out.println("=====================================================");
+		
 		Point p1 = new Point(7, 9);
 		Point p2 = new Point(7, 8);
+		
+		String strP1 = p1.toString();
+		
+		System.out.println( strP1 );
+		
 		
 		// System.out.println( p1 == p2  );
 		System.out.println( p1.equals(p2) );
