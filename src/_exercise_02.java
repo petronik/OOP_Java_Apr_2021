@@ -20,10 +20,21 @@ for example:
 public class _exercise_02 {
 
 	   public static int solve(String s){ 
-	    	int res = 0;
-	    	
-	    	
-	    	return res;
+		   
+		   String res = "";
+		   
+	    	/*
+	    	 
+	    	 abcd dabc
+	    	 
+	    	 1. a ? c
+	    	 2. ab ? bc
+	    	 3. abc ? abc
+	    	 4. abcd ? dabc
+	    	 
+	    	 
+	    	 * */
+	    	return res.length();
 	    }
 	    
 		public static void main(String[] args) {
