@@ -22,13 +22,9 @@ public class _exercise_02 {
 	public static int solve(String s) {
 
 		if (s.length() < 2) { return 0; }
-		
 		int res = 0;
-		
 		for (int i = 0; i < s.length() / 2; i++) {
-			
-			if(s.substring(0, i + 1).equals(s.substring( s.length() - 1 - i ))) {
-				
+			if(s.substring(0, i + 1).equals(s.substring( s.length() - 1 - i ))) {	
 				res = i + 1; // s.substring(0, i + 1).length()
 			}
 		}
