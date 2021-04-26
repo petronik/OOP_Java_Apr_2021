@@ -17,6 +17,7 @@ If the 3rd letter is a vowel, return the first 4 letters.
 nickname("Jeannie") //=> "Jean"
 nickname("Douglas") //=> "Doug"
 nickname("Gregory") //=> "Greg"
+
 If the string is less than 4 characters, return "Error: Name too short".
 
 Notes:
@@ -28,14 +29,40 @@ The input can be modified
 */
 
 public class _exercise_03 {
-	
-	public static String nickname (String name) {
 
-		return null;
+	public static String nickname(String name) {
+
+		if (name.length() < 4)
+			return "Error: Name too short";
+
+		String vowels = "aeiou";
+
+		if (vowels.indexOf(name.charAt(2)) == -1) {
+			return name.substring(0, 3);
+		}
+		/*
+		 * if(!(name.charAt(2) == 'a' || name.charAt(2) == 'e' || name.charAt(2) == 'i'
+		 * || name.charAt(2) == 'o' || name.charAt(2) == 'u')) {
+		 * 
+		 * return name.substring(0, 3); }
+		 */
+		return name.substring(0, 4);
 	}
-	
+
 	public static void main(String[] args) {
 
+		String[] names = { "Gregory", "Douglas", "Jeannie", "Robert", "Kimberly", "Samantha", "Sam" };
+
+		for (int i = 0; i < names.length; i++) {
+			System.out.println(nickname(names[i]));
+		}
+
+		/*
+		 * for (int i = 0; i < name.length(); i++) { char ch = name.charAt(i); if
+		 * (!(name.charAt(2) == 'a' || name.charAt(2) == 'e' || name.charAt(2) == 'i' ||
+		 * name.charAt(2) == 'o' || name.charAt(2) == 'u')) { System.out.println(ch); }
+		 * }
+		 */
 
 	}
 

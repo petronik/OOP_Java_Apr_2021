@@ -4,9 +4,12 @@ public class Laptop {
 	
 	private double _price;
 	private String _brand;
-
+	private final double k = 1.5;
+	
+	public Laptop() {}
+	
 	public Laptop(double cost, String brand) {
-		_price = cost * 1.5;
+		_price = cost * k;
 		_brand = brand;
 	}
 
@@ -16,6 +19,15 @@ public class Laptop {
 	
 	public String getBrand() {
 		return _brand;
+	}
+	
+	public Laptop makeCopy() {
+		
+		Laptop newLaptop = new Laptop(_price / k, _brand);
+		//newLaptop._brand = _brand;
+		// newLaptop._price = _price;
+		
+		return newLaptop;
 	}
 	
 	@Override
