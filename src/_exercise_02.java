@@ -19,25 +19,44 @@ for example:
 
 public class _exercise_02 {
 
-	   public static int solve(String s){ 
-		   
-		   String res = "";
-		   
-	    	/*
-	    	 
-	    	 abcd dabc
-	    	 
-	    	 1. a ? c
-	    	 2. ab ? bc
-	    	 3. abc ? abc
-	    	 4. abcd ? dabc
-	    	 
-	    	 
-	    	 * */
-	    	return res.length();
-	    }
-	    
-		public static void main(String[] args) {
+	public static int solve(String s) {
+
+		if (s.length() < 2) { return 0; }
+		
+		int res = 0;
+		
+		for (int i = 0; i < s.length() / 2; i++) {
 			
+			if(s.substring(0, i + 1).equals(s.substring( s.length() - 1 - i ))) {
+				
+				res = i + 1; // s.substring(0, i + 1).length()
+			}
 		}
+		
+		
+		return res;
+
+		/*
+		int n = s.length();
+		
+		if (n < 2) { return 0; }
+		int pre = 0; // a
+		int suf = (n + 1) / 2; // a
+		while (suf < n) {
+			if (s.charAt(suf) == s.charAt(pre)) {
+				++pre;
+				++suf;
+			} else {
+				suf = suf - pre + 1;
+				pre = 0;
+			}
+		}
+		return pre;
+		*/
+	}
+
+	public static void main(String[] args) {
+		
+		System.err.println(solve("abcdabc")); 
+	}
 }
