@@ -30,15 +30,13 @@ The input can be modified
 public class _exercise_03 {
 	
 	public static String nickname (String name) {
-		int str = name.length();
-		name.toUppercase(charAt(0));
 
 		return null;
 	}
 	
 	public static void main(String[] args) {
 
-	System.out.println(nikname("samantha"));
+
 	}
 
 }
