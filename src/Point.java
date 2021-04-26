@@ -17,4 +17,5 @@ public class Point {
 	public String toString() {
 		return "x = " + _x + " y = " + _y;
 	}
+	
 }
