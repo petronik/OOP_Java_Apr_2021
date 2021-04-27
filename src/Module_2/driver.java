@@ -4,9 +4,38 @@ public class driver {
 
 	public static void main(String[] args) {
 		
+		
+		Laptop laptop1 = new Laptop(2000, "MacBook MegaPro 2021");
+		Laptop laptop2 = new Laptop(150, "Noname - 123");
+		
+		System.out.println(laptop1);
+		System.out.println(laptop2);
+		
+		laptop1.swap(laptop2);
+		
+		System.out.println(laptop1);
+		System.out.println(laptop2);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		Laptop lt1 = new Laptop(800.55, "HP-1234");
 		
-		//Laptop lt2 = lt1;
+		
+		
+		
+		//Laptop lt2 = lt1; !!!!!!!
+		
+		
+		
 		
 		// lt2 => lt2.equals(lt1)
 		Laptop lt2 = lt1.makeCopy();
