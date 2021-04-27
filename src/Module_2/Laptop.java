@@ -32,8 +32,7 @@ public class Laptop {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return _brand + " $" + _price;
+		return "Brand " + _brand + " $" + _price;
 	}
 
 }

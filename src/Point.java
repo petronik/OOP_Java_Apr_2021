@@ -1,4 +1,3 @@
-
 public class Point {
 	
 	private double _x = 0;

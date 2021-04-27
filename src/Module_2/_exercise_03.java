@@ -1,5 +1,6 @@
 package Module_2;
 
+
 /*
 Nickname Generator
 
@@ -30,13 +31,20 @@ The input can be modified
 public class _exercise_03 {
 	
 	public static String nickname (String name) {
-
-		return null;
+		if(name.length() < 4 ) return "Error: Name too short";
+		String vowels = "aeiou";
+		if(vowels.indexOf(name.charAt(2)) == -1) {
+			return name.substring(0, 3);
+		}
+		return name.substring(0, 4);
 	}
 	
 	public static void main(String[] args) {
 
-
+		String[] names = { "Gregory", "Douglas", "Jeannie", "Robert", "Kimberly", "Samantha", "Sam"};
+		for(int i = 0; i = names.length(); i++){
+			System.out.println(nickname(names[i]));
+		}
 	}
 
 }
