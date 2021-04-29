@@ -5,6 +5,17 @@ public class driver {
 	public static void main(String[] args) {
 		
 		
+		IP_demo ip = new IP_demo("");
+		
+		System.out.println(ip.getOctet(4));
+		System.out.println(ip.getOctet(1));
+		System.out.println(ip.getOctet(3));
+		System.out.println(ip.getOctet(2));
+		
+		
+		
+		System.out.println("=============================================================");
+		
 		Laptop laptop1 = new Laptop(2000, "MacBook MegaPro 2021");
 		Laptop laptop2 = new Laptop(150, "Noname - 123");
 		
