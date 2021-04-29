@@ -3,12 +3,31 @@ package Module_2;
 public class IP_demo {
 	
 	private String _dottedDecimal;
-	private int _firstOctet = 1, _secondOctet = 2, _thirdOctet = 3, _fourthOctet = 4;
+	private int _firstOctet, _secondOctet, _thirdOctet, _fourthOctet;
 	
 	public IP_demo(String ip) {
 		_dottedDecimal = ip;
 		
-		// 
+		char div = '.';
+		String temp = ip + div;
+		String octet = "";
+		int i = 1;
+
+		while (temp.indexOf(div) != -1) {
+			
+			octet = temp.substring(0, temp.indexOf(".") );
+			temp = temp.substring(temp.indexOf(".") + 1);
+			
+			switch (i) {
+			case 1: _firstOctet = Integer.parseInt(octet); break;
+			case 2: _secondOctet = Integer.parseInt(octet); break;
+			case 3: _thirdOctet = Integer.parseInt(octet); break;
+			case 4: _fourthOctet = Integer.parseInt(octet); break;
+			}
+			
+			i++;
+		}
+		
 	}
 	
 	public String getDottedDecimal() {
@@ -16,12 +35,6 @@ public class IP_demo {
 	}
 	
 	public int getOctet(int index) { // 1, 2, 3, or 4 ||| 777
-		
-		// index => _?Octet
-		// 1 => _firstOctet
-		// 2 => _secondOctet
-		// 3 => _thirdOctet 
-		// 4 => _fourthOctet
 		
 		switch(index) {
 		case 1: return _firstOctet;
