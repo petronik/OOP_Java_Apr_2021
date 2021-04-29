@@ -48,7 +48,13 @@ public class Laptop {
 		toSwap._price = temp._price;
 		toSwap._brand = temp._brand;
 	}
-
+	
+	
+	public void finalize() {
+		_brand = null;
+		System.err.println(" obj is garbage collcected ");
+	}
+	
 	@Override
 	public String toString() {
 		return "Brand " + _brand + " $" + _price;
