@@ -5,7 +5,7 @@ class NewCar{
     public double getPrice() {
         return _price;
     }
-}
+
 
 public NewCar(double cost, String color) {
     _color = color;
