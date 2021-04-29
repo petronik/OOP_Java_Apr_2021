@@ -38,15 +38,35 @@ public class Automobile {
 	}
 	
 	public void setColor() {
-		/**/
+        char inpColor;
+        
+        while(true) {
+            System.out.print("Select blue, green, or red (b, g, r): ");
+            inpColor = _sn.next().charAt(0);
+            
+            if(inpColor == 'b' || inpColor == 'g'  || inpColor == 'r')
+                break;
+            else
+            	System.out.println("The only valid selections are 'b', 'g', or 'r'.");
+        }
+        
+        switch(inpColor){
+            case 'b' : _color = "Blue"; break;
+            case 'g' : _color = "Green"; break;
+            case 'r' : _color = "Red"; break;
+        }
+    }
+	
+	public Automobile printMake() {
+		System.out.print(_model + " ");
+		
+		return this;
 	}
 	
-	public void printMake() {
-		System.out.println(_model);
-	}
-	
-	public void printColor() {
-		System.out.println(_color);
+	public Automobile printColor() {
+		System.out.println(_color + " ");
+		
+		return this;
 	}
 	
 	

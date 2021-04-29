@@ -11,11 +11,17 @@ public class driver {
 		System.out.println(laptop1);
 		System.out.println(laptop2);
 		
-		laptop1.swap(laptop2);
+		// laptop1.swap(laptop2);
 		
 		System.out.println(laptop1);
 		System.out.println(laptop2);
 		
+		laptop1 = null;
+		laptop2 = null;
+		
+		System.gc();
+		
+		// ===========================================================================
 		
 		
 		
@@ -23,8 +29,7 @@ public class driver {
 		
 		
 		
-		
-		
+		/*
 		
 		
 		Laptop lt1 = new Laptop(800.55, "HP-1234");
@@ -40,7 +45,7 @@ public class driver {
 		// lt2 => lt2.equals(lt1)
 		Laptop lt2 = lt1.makeCopy();
 		
-		System.err.println( lt2.equals(lt1) );
+		// System.err.println( lt2.equals(lt1) );
 		
 		lt2.setBrand("Lenovo-78911");
 		// lt2 = new Laptop(500, "Lenovo-78911");
@@ -56,6 +61,7 @@ public class driver {
 		
 		System.out.println(str1);
 		System.out.println(str2);
+		*/
 	}
 
 }
