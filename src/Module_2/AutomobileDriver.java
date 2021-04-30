@@ -20,6 +20,8 @@ public class AutomobileDriver {
 			
 			car.printMake().printColor();
 		}
+
+		System.out.print("Have a nice day!");
 	}
 
 }
