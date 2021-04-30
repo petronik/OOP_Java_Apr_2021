@@ -35,13 +35,34 @@ arthur madison anderson -> A.M.Anderson
 
 public class _exercise_04 {
 	public static String initials(String name) {
-
-		return "";
+		
+		String[] arr = name.split(" ");
+		String res = "";
+		
+		for (int i = 0; i < arr.length; i++) {
+			// System.out.print( arr[i] + "-" );
+			char ch = arr[i].charAt(0);
+			
+			if( i !=  arr.length - 1) {
+				res += Character.toUpperCase( ch ) + ".";
+			}
+			else {
+				res += capitalize(arr[i]);
+			}
+		}
+		
+		return res;
 	}
 
+	public static String capitalize(String value) {
+		return Character.toUpperCase(value.charAt(0)) + value.substring(1).toLowerCase();
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.err.println();
+		System.err.println(
+				initials("miguel Alice Charlotte liam olivia Charlotte Valentina Lewis")
+				);
 	}
 }
