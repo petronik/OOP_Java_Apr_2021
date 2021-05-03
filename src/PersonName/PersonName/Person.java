@@ -20,8 +20,15 @@ public class Person{
     public void setLast( String newLast){
         _last = newLast;
     }
+    public static void setNumOfPeople(int v) {
+        numOfPeople = v;
+    }
+    public static int getNumOfPeople() {
+        return numOfPeople;
+    }
     public Person printFullName() {
         System.out.println(_first + " " + _last);
         return this;
     }
+
 }

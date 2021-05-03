@@ -39,12 +39,14 @@ Good luck!
 
 public class _exercise_05 {
 	
-	public static String solve(String s) {
+	public static String solve(String str) {
+		String _myString = str;
+		String res = _myString.reverse();
 
-		return "";
+		return res;
 	}
 
 	public static void main(String[] args) {
-
+		System.out.println("Hello my World");
 	}
 }

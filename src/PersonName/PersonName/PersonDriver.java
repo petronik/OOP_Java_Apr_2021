@@ -1,6 +1,6 @@
 package PersonName;
 
-public class NameDriver {
+public class PersonDriver {
     public static void main(String[] args){
     Person person1 = new Person();
     person1.printFullName();
@@ -9,8 +9,8 @@ public class NameDriver {
     person1.setFirst("Paul");
     person1.setLast("John");
     person1.printFullName();
-    // System.out.println("Total number of people = " +
-    // Person.getNumOfPeople());
+    System.out.println("Total number of people = " +
+    Person.getNumOfPeople());
     }
 }
 

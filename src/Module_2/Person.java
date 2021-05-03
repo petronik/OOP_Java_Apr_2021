@@ -42,9 +42,9 @@ public class Person {
 		_last = newLast;
 	}
 
-	public Person printFullName() {
+	public void printFullName() {
 		
 		System.out.println(_first + " " + _last);
-		return this;
+		
 	}
 }
