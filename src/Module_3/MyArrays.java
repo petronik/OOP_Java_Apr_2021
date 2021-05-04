@@ -40,7 +40,12 @@ public class MyArrays {
 	}
 
 	public static int avarage(int[] arr) {
-		// your code
-		return 0;
+		int res = 0;
+		int sum = 0;
+		for(int a : arr) {
+			sum += a;
+		}
+		res = sum / arr.length;
+		return res;
 	}
 }
