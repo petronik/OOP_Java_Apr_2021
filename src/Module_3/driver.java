@@ -34,6 +34,13 @@ public class driver {
 		System.out.println( MyArrays.sum(arr1) );
 		System.out.println( MyArrays.sum(arr2) );
 		
+		int[] arr3 = {10, 5, 1, -3, 2, 4}; 
+		int[] arr4 = new int[0];
+		
+		System.out.println( "avarage = " +  MyArrays.avarage(arr4) + " " + (arr4 == null) );
+		
+		System.out.println( "min = " + MyArrays.min(arr3) );
+		System.out.println( "max = " + MyArrays.max(arr3) );
 		
 		//Arrays.toString(null)
 		
