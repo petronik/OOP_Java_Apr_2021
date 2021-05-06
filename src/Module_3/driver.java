@@ -4,11 +4,37 @@ import java.util.Arrays;
 
 public class driver {
 
-	
-	
 	public static void main(String[] args) {
-
-
+		
+		// Voucher v1 = new Voucher("", 100.0, "", "");
+		Voucher.initialize(1001, 2001, 8);
+		
+		/*
+		Enter purchase date (dd/mm/yyyy): 17/08/2003
+		Enter amount: $123.45
+		Enter name of account to debit: tools
+		Enter name of vendor: Mack's Hardware
+	 	*/
+		Voucher.add("17/08/2003", 123.45, "tools", "Mack's Hardware");
+		Voucher.add("15/09/2003", 67.42, "supplies", "ABC Company");	
+		
+		Voucher.issueCheck();
+		
+		Voucher.printData();
+		
+		/*
+		Party party = new Party(3, "David Beckham");
+		party.addGuest("Roberto Baggio");
+		party.addGuest("Zinedine Zidane");
+		party.addGuest("Roberto Baggio");
+		party.addGuest("Johan Cruyff");
+		party.addGuest("Diego Maradona");
+		party.printParty();
+		*/
+		
+		System.err.println("========================================================");
+		
+		
 		int[] intArr = new int[3];
 		int[] intArr2 = { 1, 2, 3, 4, 5 };
 		int[] intArr3 = new int[] { 7, 8, 9 };
