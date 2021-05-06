@@ -33,10 +33,8 @@ public class Voucher {
     	nextVoucherNumber++;
     }
     
-    public static void add(String purchaseDate, double amount, String debitAccount, String vendor) {
-    	// 1. new Voucher
-    	Voucher newVoucher = new Voucher(purchaseDate, amount, debitAccount, vendor);
-    	
+    public static void add() {
+
     	// 2. add new Voucher to vouchers
     	int minIndex = -1;
     	
@@ -46,15 +44,21 @@ public class Voucher {
 				break;
 			}
 		}
+    	
     	// 3. check for -1
-    	vouchers[minIndex] = newVoucher;
+    	// 1. new Voucher
+    	// String purchaseDate, double amount, String debitAccount, String vendor
+    	
+    	//Voucher newVoucher = new Voucher(purchaseDate, amount, debitAccount, vendor);
+    	//vouchers[minIndex] = newVoucher;
     }
     
     public static void printData() {
     	
     	for(var v : vouchers)  {
     		if(v != null)
-    			System.out.println("voucher #" + v._voucherNumber + " date: " + v._purchaseDate);
+    			System.out.println("voucher #" + v._voucherNumber + " date: " + v._purchaseDate + "\n" 
+    					+ v._checkNumber + " " + v._paymentDate);
     		else
     			System.out.println("NULL");
     	}
@@ -64,18 +68,24 @@ public class Voucher {
     	
     	int vn = 0;
     	System.out.print("Enter number of voucher to pay: ");
-    	vn = _sn.nextInt();
+    	vn =  Integer.parseInt(_sn.nextLine());
     	
     	Voucher cv = find(vn);
     	
     	if(cv == null)
     		System.err.println("No vouchers have that number.");
+    	else {
+    		System.out.print("Enter payment date (dd/mm/yyyy): ");
+    		cv._paymentDate = _sn.nextLine();
+    		cv._checkNumber = nextCheckNumber;
+    		nextCheckNumber++;
+    	}
     };
     
     public static Voucher find(int voucherNumber) {
     	
     	for( Voucher v : vouchers  ) {
-    		if(v._voucherNumber == voucherNumber) {
+    		if(v != null && v._voucherNumber == voucherNumber) {
     			return v;
     		}
     	}

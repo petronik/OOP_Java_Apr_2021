@@ -7,7 +7,7 @@ public class driver {
 	public static void main(String[] args) {
 		
 		// Voucher v1 = new Voucher("", 100.0, "", "");
-		Voucher.initialize(1001, 2001, 8);
+		Voucher.initialize(1001, 2001, 3);
 		
 		/*
 		Enter purchase date (dd/mm/yyyy): 17/08/2003
@@ -15,12 +15,14 @@ public class driver {
 		Enter name of account to debit: tools
 		Enter name of vendor: Mack's Hardware
 	 	*/
-		Voucher.add("17/08/2003", 123.45, "tools", "Mack's Hardware");
-		Voucher.add("15/09/2003", 67.42, "supplies", "ABC Company");	
+		Voucher.add(); // 1
+		Voucher.add();	
 		
+		Voucher.issueCheck(); // 3
 		Voucher.issueCheck();
 		
-		Voucher.printData();
+		
+		Voucher.printData(); // 2
 		
 		/*
 		Party party = new Party(3, "David Beckham");
@@ -32,9 +34,9 @@ public class driver {
 		party.printParty();
 		*/
 		
-		System.err.println("========================================================");
+		//System.err.println("========================================================");
 		
-		
+		/*
 		int[] intArr = new int[3];
 		int[] intArr2 = { 1, 2, 3, 4, 5 };
 		int[] intArr3 = new int[] { 7, 8, 9 };
@@ -104,6 +106,6 @@ public class driver {
 		// intArr[3] = 4;
 		
 		// String[] 
-
+		*/
 	}
 }
