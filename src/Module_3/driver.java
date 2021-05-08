@@ -6,6 +6,54 @@ public class driver {
 
 	public static void main(String[] args) {
 		
+		//int rows = 5;
+		int cols = 2;
+		
+		
+		// A E I O U
+		
+		// 'A' lcA ucA
+		// 'E' lcE ucE
+		// 'I' lcI ucI
+		// 'O' lcO ucO
+		// 'U' lcU ucU
+		
+		char[] vowels = { 'A', 'E', 'I', 'O', 'U', 'Y' };
+		
+		int[][] twoDimArr = new int[vowels.length][cols];
+		
+		//System.out.println(twoDimArr.length);
+		//System.out.println(twoDimArr[0].length);
+		
+		for (int r = 0; r < twoDimArr.length; r++) {
+			for (int c = 0; c < twoDimArr[r].length; c++) {
+				
+				// 
+				twoDimArr[r][c] = r + c + 1;
+				
+			}
+		}
+		
+		for (int r = 0; r < twoDimArr.length; r++) {
+			
+			System.out.print(vowels[r] + ": ");
+			
+			int res = 0;
+			char ch = 'a';
+			Character.isLowerCase(ch); // tda[r][0]++;
+			Character.isUpperCase(ch); // tda[r][1]++;
+			
+			
+			for (int c = 0; c < twoDimArr[r].length; c++) {
+				res += twoDimArr[r][c];
+				System.out.print( twoDimArr[r][c] + "\t" );
+			}
+			
+			System.out.println("total: " + res
+					// + MyArrays.sum(twoDimArr[r])
+					);
+		}
+		
 		// Voucher v1 = new Voucher("", 100.0, "", "");
 		Voucher.initialize(1001, 2001, 3);
 		
@@ -15,11 +63,11 @@ public class driver {
 		Enter name of account to debit: tools
 		Enter name of vendor: Mack's Hardware
 	 	*/
-		Voucher.add(); // 1
-		Voucher.add();	
+		//Voucher.add(); // 1
+		//Voucher.add();	
 		
-		Voucher.issueCheck(); // 3
-		Voucher.issueCheck();
+		//Voucher.issueCheck(); // 3
+		//Voucher.issueCheck();
 		
 		
 		Voucher.printData(); // 2
